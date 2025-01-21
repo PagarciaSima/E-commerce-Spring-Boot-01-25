@@ -11,7 +11,7 @@ public class ProductService {
     private final IProductRepository iProductRepository;
 
     public Product save (Product product) {
-        return this.iProductRepository.save(product)
+        return this.iProductRepository.save(product);
     }
 
     public Iterable<Product> findAll() {
@@ -19,7 +19,7 @@ public class ProductService {
     }
 
     public Product findById (Integer id) {
-        return  this.iProductRepository.findById();
+        return  this.iProductRepository.findById(id);
     }
 
     public void deleteById (Integer id) {
