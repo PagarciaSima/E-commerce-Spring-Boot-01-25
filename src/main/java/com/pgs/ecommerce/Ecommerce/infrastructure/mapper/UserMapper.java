@@ -1,7 +1,7 @@
 package com.pgs.ecommerce.Ecommerce.infrastructure.mapper;
 
 import com.pgs.ecommerce.Ecommerce.domain.model.User;
-import com.pgs.ecommerce.Ecommerce.infrastructure.UserEntity;
+import com.pgs.ecommerce.Ecommerce.infrastructure.entity.UserEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

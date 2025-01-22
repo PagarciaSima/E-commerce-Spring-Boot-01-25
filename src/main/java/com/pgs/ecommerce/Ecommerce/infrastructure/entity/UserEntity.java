@@ -1,4 +1,4 @@
-package com.pgs.ecommerce.Ecommerce.infrastructure;
+package com.pgs.ecommerce.Ecommerce.infrastructure.entity;
 
 import com.pgs.ecommerce.Ecommerce.domain.model.UserType;
 import jakarta.persistence.*;
