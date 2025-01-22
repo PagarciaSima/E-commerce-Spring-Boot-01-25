@@ -9,7 +9,7 @@ import org.mapstruct.Mappings;
 
 // Instantiated by spring
 @Mapper(componentModel = "spring")
-public interface CategoryMapper {
+public interface ICategoryMapper {
 
     @Mappings(
             {

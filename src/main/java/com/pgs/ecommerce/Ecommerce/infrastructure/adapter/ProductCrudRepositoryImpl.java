@@ -2,7 +2,7 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.adapter;
 
 import com.pgs.ecommerce.Ecommerce.domain.model.Product;
 import com.pgs.ecommerce.Ecommerce.domain.port.IProductRepository;
-import com.pgs.ecommerce.Ecommerce.infrastructure.mapper.ProductMapper;
+import com.pgs.ecommerce.Ecommerce.infrastructure.mapper.IProductMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -13,21 +13,21 @@ import java.util.NoSuchElementException;
 public class ProductCrudRepositoryImpl implements IProductRepository {
 
     private final IProductCrudRepository iProductCrudRepository;
-    private final ProductMapper productMapper;
+    private final IProductMapper IProductMapper;
 
     @Override
     public Product save(Product product) {
-        return productMapper.toProduct(iProductCrudRepository.save(productMapper.toProductEntity(product)));
+        return IProductMapper.toProduct(iProductCrudRepository.save(IProductMapper.toProductEntity(product)));
     }
 
     @Override
     public Iterable<Product> findAll() {
-        return productMapper.toProductList(iProductCrudRepository.findAll());
+        return IProductMapper.toProductList(iProductCrudRepository.findAll());
     }
 
     @Override
     public Product findById(Integer id) {
-        return productMapper.toProduct(iProductCrudRepository.findById(id).orElseThrow(
+        return IProductMapper.toProduct(iProductCrudRepository.findById(id).orElseThrow(
                 () -> new NoSuchElementException("Product ID " + id + " not found")
         ));
     }

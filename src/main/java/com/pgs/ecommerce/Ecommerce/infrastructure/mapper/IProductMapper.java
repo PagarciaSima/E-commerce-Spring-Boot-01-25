@@ -1,15 +1,13 @@
 package com.pgs.ecommerce.Ecommerce.infrastructure.mapper;
 
-import com.pgs.ecommerce.Ecommerce.domain.model.Category;
 import com.pgs.ecommerce.Ecommerce.domain.model.Product;
-import com.pgs.ecommerce.Ecommerce.infrastructure.entity.CategoryEntity;
 import com.pgs.ecommerce.Ecommerce.infrastructure.entity.ProductEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
-public interface ProductMapper {
+public interface IProductMapper {
 
 
     @Mappings(
