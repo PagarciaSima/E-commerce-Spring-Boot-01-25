@@ -19,11 +19,11 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> save(@RequestBody User user) {
-        return ResponseEntity.ok(userService.save(user));
+        return ResponseEntity.ok(this.userService.save(user));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable Integer id) {
-        return ResponseEntity.ok(userService.findById(id));
+        return ResponseEntity.ok(this.userService.findById(id));
     }
 }

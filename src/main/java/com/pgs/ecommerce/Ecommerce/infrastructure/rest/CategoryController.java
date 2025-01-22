@@ -24,17 +24,17 @@ public class CategoryController {
 
     @GetMapping
     public ResponseEntity<Iterable<Category>> findAll () {
-        return ResponseEntity.ok(categoryService.findAll());
+        return ResponseEntity.ok(this.categoryService.findAll());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Category> findById (@PathVariable Integer id) {
-        return ResponseEntity.ok(categoryService.findById(id));
+        return ResponseEntity.ok(this.categoryService.findById(id));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Category> deleteById (@PathVariable Integer id) {
-        categoryService.findById(id);
+        this.categoryService.findById(id);
         return ResponseEntity.ok().build();
     }
 }

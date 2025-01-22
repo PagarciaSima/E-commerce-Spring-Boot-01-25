@@ -1,8 +1,10 @@
 package com.pgs.ecommerce.Ecommerce.infrastructure.config;
 
 import com.pgs.ecommerce.Ecommerce.application.CategoryService;
+import com.pgs.ecommerce.Ecommerce.application.ProductService;
 import com.pgs.ecommerce.Ecommerce.application.UserService;
 import com.pgs.ecommerce.Ecommerce.domain.port.ICategoryRepository;
+import com.pgs.ecommerce.Ecommerce.domain.port.IProductRepository;
 import com.pgs.ecommerce.Ecommerce.domain.port.IUserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,5 +21,11 @@ public class BeanConfiguration {
     public CategoryService categoryService (ICategoryRepository categoryRepository) {
         return new CategoryService(categoryRepository);
     }
+
+    @Bean
+    public ProductService productService (IProductRepository ProductRepository) {
+        return new ProductService(ProductRepository);
+    }
+
 
 }
