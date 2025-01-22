@@ -34,6 +34,8 @@ public class CategoryCrudRepositoryImpl implements ICategoryRepository {
 
     @Override
     public void deleteById(Integer id) {
-        iCategoryCrudRepository.deleteById(id);
+        Category category = this.findById(id);
+        if( null != category)
+            iCategoryCrudRepository.deleteById(id);
     }
 }

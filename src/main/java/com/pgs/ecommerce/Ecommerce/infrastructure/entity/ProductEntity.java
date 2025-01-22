@@ -27,7 +27,7 @@ public class ProductEntity {
     @CreationTimestamp
     private LocalDateTime dateCreated;
     @UpdateTimestamp
-    private LocalDateTime dataUpdated;
+    private LocalDateTime dateUpdated;
 
     @ManyToOne
     private UserEntity userEntity;
