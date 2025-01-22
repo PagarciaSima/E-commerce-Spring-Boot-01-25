@@ -2,6 +2,8 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.adapter;
 
 import java.util.NoSuchElementException;
 
+import org.springframework.stereotype.Repository;
+
 import com.pgs.ecommerce.Ecommerce.domain.model.Order;
 import com.pgs.ecommerce.Ecommerce.domain.model.OrderState;
 import com.pgs.ecommerce.Ecommerce.domain.port.IOrderRepository;
@@ -11,6 +13,7 @@ import com.pgs.ecommerce.Ecommerce.infrastructure.mapper.IOrderMapper;
 
 import lombok.AllArgsConstructor;
 
+@Repository
 @AllArgsConstructor
 public class OrderCrudRepositoryImpl implements IOrderRepository{
 	
