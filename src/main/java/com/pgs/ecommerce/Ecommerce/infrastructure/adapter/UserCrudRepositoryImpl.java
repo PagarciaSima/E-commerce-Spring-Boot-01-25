@@ -6,6 +6,8 @@ import com.pgs.ecommerce.Ecommerce.infrastructure.mapper.UserMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.NoSuchElementException;
+
 @Repository
 @AllArgsConstructor
 public class UserCrudRepositoryImpl implements IUserRepository {
@@ -20,7 +22,9 @@ public class UserCrudRepositoryImpl implements IUserRepository {
 
     @Override
     public User findById(Integer id) {
-        return userMapper.toUser(iUserCrudRepository.findById(id).get());
+        return userMapper.toUser(iUserCrudRepository.findById(id).orElseThrow(
+                () -> new NoSuchElementException("User ID " + id + " not found")
+        ));
     }
 
     @Override
