@@ -7,20 +7,31 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "products")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CategoryEntity {
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String code;
+    private String description;
+    private String urlImage;
+    private BigDecimal price;
     @CreationTimestamp
     private LocalDateTime dateCreated;
     @UpdateTimestamp
-    private LocalDateTime dateUpdated;
+    private LocalDateTime dataUpdated;
+
+    @ManyToOne
+    private UserEntity userEntity;
+    @ManyToOne
+    private CategoryEntity categoryEntity;
+
 }

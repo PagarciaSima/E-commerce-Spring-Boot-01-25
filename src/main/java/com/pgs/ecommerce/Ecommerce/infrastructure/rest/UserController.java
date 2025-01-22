@@ -4,6 +4,7 @@ import com.pgs.ecommerce.Ecommerce.application.UserService;
 import com.pgs.ecommerce.Ecommerce.domain.model.User;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,12 +18,12 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public User save(@RequestBody User user) {
-        return userService.save(user);
+    public ResponseEntity<User> save(@RequestBody User user) {
+        return ResponseEntity.ok(userService.save(user));
     }
 
     @GetMapping("/{id}")
-    public User findById(@PathVariable Integer id) {
-        return userService.findById(id);
+    public ResponseEntity<User> findById(@PathVariable Integer id) {
+        return ResponseEntity.ok(userService.findById(id));
     }
 }

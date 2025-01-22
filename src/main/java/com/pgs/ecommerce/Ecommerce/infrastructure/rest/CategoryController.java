@@ -4,6 +4,8 @@ import com.pgs.ecommerce.Ecommerce.application.CategoryService;
 import com.pgs.ecommerce.Ecommerce.domain.model.Category;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,22 +18,23 @@ public class CategoryController {
     private final CategoryService categoryService;
 
     @PostMapping
-    public Category save(@RequestBody Category category) {
-        return this.categoryService.save(category);
+    public ResponseEntity<Category> save(@RequestBody Category category) {
+        return new ResponseEntity<>(this.categoryService.save(category), HttpStatus.CREATED);
     }
 
     @GetMapping
-    public Iterable<Category> findAll () {
-        return categoryService.findAll();
+    public ResponseEntity<Iterable<Category>> findAll () {
+        return ResponseEntity.ok(categoryService.findAll());
     }
 
     @GetMapping("/{id}")
-    public Category findById (@PathVariable Integer id) {
-        return categoryService.findById(id);
+    public ResponseEntity<Category> findById (@PathVariable Integer id) {
+        return ResponseEntity.ok(categoryService.findById(id));
     }
 
     @DeleteMapping("/{id}")
-    public Category deleteById (@PathVariable Integer id) {
-        return categoryService.findById(id);
+    public ResponseEntity<Category> deleteById (@PathVariable Integer id) {
+        categoryService.findById(id);
+        return ResponseEntity.ok().build();
     }
 }

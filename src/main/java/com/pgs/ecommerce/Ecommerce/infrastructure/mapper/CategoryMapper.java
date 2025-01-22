@@ -12,10 +12,12 @@ import org.mapstruct.Mappings;
 public interface CategoryMapper {
 
     @Mappings(
-            @Mapping(source = "id", target = "id"),
-            @Mapping(source = "name", target = "name"),
-            @Mapping(source = "dateCreated", target = "dateCreated"),
-            @Mapping(source = "dateUpdated", target = "dateUpdated")
+            {
+                    @Mapping(source = "id", target = "id"),
+                    @Mapping(source = "name", target = "name"),
+                    @Mapping(source = "dateCreated", target = "dateCreated"),
+                    @Mapping(source = "dateUpdated", target = "dateUpdated")
+            }
     )
     Category toCategory (CategoryEntity categoryEntity);
 
