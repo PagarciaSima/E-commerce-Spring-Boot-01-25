@@ -3,6 +3,8 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.rest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +31,7 @@ public class OrderController {
 		return ResponseEntity.ok(this.orderService.save(order));
 	}
 	
-	@PostMapping("/update/state/order")
+	@PatchMapping("/update/state/order")
 	public ResponseEntity<String> updateStateById(@RequestParam Integer id, @RequestParam String state) {
 		this.orderService.updateStateId(id, state);
 		return new ResponseEntity<String>("Update successful", HttpStatus.OK);
@@ -37,6 +39,16 @@ public class OrderController {
 	
 	@GetMapping
 	public ResponseEntity<Iterable<Order>> findAll() {
-		return ResponseEntity.ok(this.orderService.findAll())
+		return ResponseEntity.ok(this.orderService.findAll());
+	}
+	
+	@GetMapping("{id}")
+	public ResponseEntity<Order> findByID(@PathVariable Integer id) {
+		return ResponseEntity.ok(this.orderService.findById(id));
+	}
+	
+	@GetMapping("/by-user/{id}")
+	public ResponseEntity<Iterable<Order>> findByUserID(@PathVariable Integer id) {
+		return ResponseEntity.ok(this.orderService.findByUserId(id));
 	}
 }

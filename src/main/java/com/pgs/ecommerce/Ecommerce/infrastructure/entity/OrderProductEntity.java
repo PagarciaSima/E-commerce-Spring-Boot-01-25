@@ -29,6 +29,6 @@ public class OrderProductEntity {
     private Integer ProductId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", nullable = false)
+    @JoinColumn(name = "order_entity_id", nullable = false)
     private OrderEntity orderEntity;
 }
