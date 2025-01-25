@@ -7,4 +7,5 @@ public interface IProductRepository {
     Iterable<Product> findAll();
     Product findById (Integer id);
     void deleteById (Integer id);
+	Product update(Integer id, Product product);
 }

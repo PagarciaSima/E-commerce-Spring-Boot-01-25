@@ -25,4 +25,8 @@ public class ProductService {
     public void deleteById (Integer id) {
         this.iProductRepository.deleteById(id);
     }
+
+	public Product update(Integer id, Product product) {
+		return this.iProductRepository.update(id, product);
+	}
 }

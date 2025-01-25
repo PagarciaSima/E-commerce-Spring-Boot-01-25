@@ -21,6 +21,11 @@ class ProductController {
     public ResponseEntity<Product> save (@RequestBody Product product) {
         return new ResponseEntity<>(this.productService.save(product), HttpStatus.CREATED);
     }
+    
+    @PutMapping("{id}")
+    public ResponseEntity<Product> update (@PathVariable Integer id, @RequestBody Product product) {
+        return new ResponseEntity<>(this.productService.update(id,product), HttpStatus.CREATED);
+    }
 
     @GetMapping
     public ResponseEntity<Iterable<Product>> findAll() {
