@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import lombok.extern.slf4j.Slf4j;
 @Slf4j
-public class UploadFile {
+public class UploadFileService {
 
     private final String FOLDER = Paths.get("src", "main", "resources", "static", "images").toString();
     private final String IMG_DEFAULT = "default.jpg";

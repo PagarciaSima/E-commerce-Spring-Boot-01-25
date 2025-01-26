@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @CrossOrigin(origins = "http://localhost:4200/")
 @RestController
@@ -17,14 +18,29 @@ class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping
-    public ResponseEntity<Product> save (@RequestBody Product product) {
-        return new ResponseEntity<>(this.productService.save(product), HttpStatus.CREATED);
+    @PostMapping(consumes = {"multipart/form-data"})
+    public ResponseEntity<Product> save(
+            @RequestPart("product") Product product,
+            @RequestPart(value = "image", required = false) MultipartFile image) {
+        try {
+            return new ResponseEntity<>(this.productService.save(product, image), HttpStatus.CREATED);
+        } catch (Exception e) {
+            log.error("Error saving product", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
-    
-    @PutMapping("{id}")
-    public ResponseEntity<Product> update (@PathVariable Integer id, @RequestBody Product product) {
-        return new ResponseEntity<>(this.productService.update(id,product), HttpStatus.CREATED);
+
+    @PutMapping(value = "{id}", consumes = {"multipart/form-data"})
+    public ResponseEntity<Product> update(
+            @PathVariable Integer id,
+            @RequestPart("product") Product product,
+            @RequestPart(value = "image", required = false) MultipartFile image) {
+        try {
+            return new ResponseEntity<>(this.productService.update(id, product, image), HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error updating product", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     @GetMapping
