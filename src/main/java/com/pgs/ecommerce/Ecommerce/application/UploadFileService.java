@@ -32,13 +32,20 @@ public class UploadFileService {
     }
     
     public void delete(String nameFile) {
-    	try {
-    		File file = new File (FOLDER + nameFile);
-        	file.delete();
-        	log.debug("File deleted successfully");
-    	} catch (SecurityException e) {
-    		log.error("The file could not get deleted: " + e.getMessage());
-    	}
-    	
+        try {
+            String fileName = nameFile.replace(URL, "");
+            
+            Path filePath = Paths.get(FOLDER, fileName);
+            
+            File file = filePath.toFile();
+            if (file.exists() && file.delete()) {
+                log.debug("File deleted successfully: {}", fileName);
+            } else {
+                log.warn("File not found or could not be deleted: {}", fileName);
+            }
+        } catch (Exception e) {
+            log.error("The file could not be deleted: {}", e.getMessage());
+        }
     }
+
 }

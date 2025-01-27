@@ -9,16 +9,19 @@ import org.springframework.web.multipart.MultipartFile;
 import com.pgs.ecommerce.Ecommerce.domain.model.Product;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
+@Slf4j
 public class ProductService {
 
     private final IProductRepository iProductRepository;
     private final UploadFileService uploadFileService;
 
     public Product save (Product product, MultipartFile multipartFile) throws IOException {
-		product.setUrlImage(uploadFileService.upload(multipartFile));
-		    	
+        String newImagePath = uploadFileService.upload(multipartFile);
+        product.setUrlImage(newImagePath); 
+	  	    	
         return this.iProductRepository.save(product);
     }
 
@@ -31,12 +34,26 @@ public class ProductService {
     }
 
     public void deleteById (Integer id) {
+    	Product product = iProductRepository.findById(id);
+    	String urlImage = product.getUrlImage();
+    	String imageName = urlImage != null ? urlImage.substring(29) : "default.jpg";
+    	log.debug("Image name: ", imageName);
+    	if(!imageName.equals("default.jpg")) {
+    		uploadFileService.delete(imageName);
+    	}
         this.iProductRepository.deleteById(id);
     }
 
-	public Product update(Integer id, Product product, MultipartFile multipartFile) throws IOException {
-		product.setUrlImage(uploadFileService.upload(multipartFile));
-		
-		return this.iProductRepository.update(id, product);
-	}
+    public Product update(Integer id, Product product, MultipartFile multipartFile) throws IOException {
+    	String urlImage = iProductRepository.findById(id).getUrlImage();
+    	String imageName = urlImage != null ? urlImage.substring(29) : "default.jpg";
+    	log.debug("Image name: ", imageName);
+    	if(!imageName.equals("default.jpg")) {
+    		uploadFileService.delete(imageName);
+    	}
+    	String newImagePath = uploadFileService.upload(multipartFile);
+        product.setUrlImage(newImagePath); 
+
+        return this.iProductRepository.update(id, product);
+    }
 }
