@@ -17,10 +17,8 @@ public class ProductService {
     private final UploadFileService uploadFileService;
 
     public Product save (Product product, MultipartFile multipartFile) throws IOException {
-		if (null != multipartFile) {
-			product.setUrlImage(uploadFileService.upload(multipartFile));
-		}
-    	
+		product.setUrlImage(uploadFileService.upload(multipartFile));
+		    	
         return this.iProductRepository.save(product);
     }
 
@@ -37,9 +35,8 @@ public class ProductService {
     }
 
 	public Product update(Integer id, Product product, MultipartFile multipartFile) throws IOException {
-		if (null != multipartFile) {
-			product.setUrlImage(uploadFileService.upload(multipartFile));
-		}
+		product.setUrlImage(uploadFileService.upload(multipartFile));
+		
 		return this.iProductRepository.update(id, product);
 	}
 }

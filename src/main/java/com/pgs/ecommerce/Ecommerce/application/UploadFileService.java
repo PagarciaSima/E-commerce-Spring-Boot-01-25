@@ -14,12 +14,12 @@ public class UploadFileService {
 
     private final String FOLDER = Paths.get("src", "main", "resources", "static", "images").toString();
     private final String IMG_DEFAULT = "default.jpg";
-    private final String URL = "http://localhost:8085/image/";
+    private final String URL = "http://localhost:8085/images/";
     
     public String upload (MultipartFile multipartFile) throws IOException {
     	if (multipartFile != null) {
     		byte [] bytes = multipartFile.getBytes();
-    		Path completePath = Paths.get(FOLDER + multipartFile.getOriginalFilename());
+    		Path completePath = Paths.get(FOLDER, multipartFile.getOriginalFilename());
     		Files.write(completePath, bytes);
     		
     		// Return the image URI
