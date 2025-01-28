@@ -3,9 +3,11 @@ package com.pgs.ecommerce.Ecommerce.application;
 import com.pgs.ecommerce.Ecommerce.domain.port.IProductRepository;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.pgs.ecommerce.Ecommerce.domain.model.Category;
 import com.pgs.ecommerce.Ecommerce.domain.model.Product;
 
 import lombok.AllArgsConstructor;
@@ -30,11 +32,14 @@ public class ProductService {
     }
 
     public Product findById (Integer id) {
+    	Product product = iProductRepository.findById(id);
+    	if (null == product)
+            throw new NoSuchElementException("Product not found with id: " + id); 
         return  this.iProductRepository.findById(id);
     }
 
     public void deleteById (Integer id) {
-    	Product product = iProductRepository.findById(id);
+    	Product product = this.findById(id);
     	String urlImage = product.getUrlImage();
     	String imageName = urlImage != null ? urlImage.substring(29) : "default.jpg";
     	log.debug("Image name: ", imageName);
@@ -45,7 +50,7 @@ public class ProductService {
     }
 
     public Product update(Integer id, Product product, MultipartFile multipartFile) throws IOException {
-    	String urlImage = iProductRepository.findById(id).getUrlImage();
+    	String urlImage = this.findById(id).getUrlImage();
     	String imageName = urlImage != null ? urlImage.substring(29) : "default.jpg";
     	log.debug("Image name: ", imageName);
     	if(!imageName.equals("default.jpg")) {
