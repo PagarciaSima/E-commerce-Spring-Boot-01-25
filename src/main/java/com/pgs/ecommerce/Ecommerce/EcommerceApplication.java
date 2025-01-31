@@ -9,12 +9,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class EcommerceApplication {
 
 	public static void main(String[] args) {
-		 Dotenv dotenv = Dotenv.configure().load();
-
-	        // Acceder a las variables de entorno
-	        String paypalClientId = dotenv.get("PAYPAL_CLIENT_ID");
-	        String paypalSecret = dotenv.get("PAYPAL_SECRET");
-	        System.out.println("PayPal Client ID: " + paypalClientId);
+		Dotenv.configure().load();
 
 		SpringApplication.run(EcommerceApplication.class, args);
 	}
