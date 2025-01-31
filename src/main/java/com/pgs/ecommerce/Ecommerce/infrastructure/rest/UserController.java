@@ -20,11 +20,20 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> save(@RequestBody User user) {
+        log.info("Received request to save user: {}", user);
         return ResponseEntity.ok(this.userService.save(user));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable Integer id) {
-        return ResponseEntity.ok(this.userService.findById(id));
+    	log.info("Received request to find user with ID: {}", id);
+        User user = this.userService.findById(id);
+        if (user != null) {
+            log.info("User found: {}", user);
+            return ResponseEntity.ok(user);
+        } else {
+            log.warn("User with ID {} not found", id);
+            return ResponseEntity.notFound().build();
+        }
     }
 }
