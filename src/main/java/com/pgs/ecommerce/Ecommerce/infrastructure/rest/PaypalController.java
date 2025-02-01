@@ -12,14 +12,15 @@ import org.springframework.web.servlet.view.RedirectView;
 import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
 import com.pgs.ecommerce.Ecommerce.domain.model.DataPayment;
+import com.pgs.ecommerce.Ecommerce.domain.model.UrlPaypalResponse;
 import com.pgs.ecommerce.Ecommerce.infrastructure.service.PaypalService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @AllArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("api/v1/payments")
 @Slf4j
 public class PaypalController {
@@ -35,7 +36,7 @@ public class PaypalController {
      * @return The PayPal approval URL or null if an error occurs.
      */
     @PostMapping
-    public String createPayment(@RequestBody DataPayment dataPayment) {
+    public UrlPaypalResponse createPayment(@RequestBody DataPayment dataPayment) {
         log.info("Received payment request: {}", dataPayment);
 
         try {
@@ -51,19 +52,20 @@ public class PaypalController {
 
             log.info("Payment created successfully: {}", payment.getId());
 
-            return payment.getLinks().stream()
-                .filter(link -> "approval_url".equals(link.getRel()))
-                .map(link -> link.getHref())
-                .findFirst()
-                .orElse("");
+            String approvalUrl = payment.getLinks().stream()
+                    .filter(link -> "approval_url".equals(link.getRel()))
+                    .map(link -> link.getHref())
+                    .findFirst()
+                    .orElse("");
 
+            return new UrlPaypalResponse(approvalUrl);
         } catch (NumberFormatException e) {
             log.error("Invalid amount format: {}", dataPayment.getAmount(), e);
         } catch (PayPalRESTException e) {
             log.error("Error creating PayPal payment", e);
         }
 
-        return "";
+        return new UrlPaypalResponse("http://localhost:4200");
     }
     
     @GetMapping("/success")
@@ -75,13 +77,14 @@ public class PaypalController {
     	try {
 			Payment payment = paypalService.executePayment(paymentId, payerId);
 			if(payment.getState().equals("approved")) {
-				return new RedirectView("http://localhost:4200/payment/success");
+				// return new RedirectView("http://localhost:4200/payment/success");
+				return new RedirectView("http://localhost:4200");
 			}
 		} catch (PayPalRESTException e) {
             log.error("Error while executing payment :: paymentSuccess ", e);
 
 		}
-    	return null;
+    	return new RedirectView("http://localhost:4200");;
     }
     
     @GetMapping("/cancel")

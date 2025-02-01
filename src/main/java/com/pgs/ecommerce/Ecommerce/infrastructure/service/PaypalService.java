@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import org.springframework.stereotype.Service;
+
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
@@ -16,6 +18,7 @@ import com.paypal.base.rest.PayPalRESTException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@Service
 @AllArgsConstructor
 @Slf4j
 public class PaypalService {
