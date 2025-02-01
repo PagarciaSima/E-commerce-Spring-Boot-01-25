@@ -14,8 +14,10 @@ import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
+@Slf4j
 public class PaypalService {
 
 	private final APIContext apiContext;
@@ -30,6 +32,9 @@ public class PaypalService {
 			String successUrl
 			
 	) throws PayPalRESTException {
+		log.info("Starting payment creation: total={}, currency={}, method={}, intent={}", 
+                total, currency, method, intent);
+
 		Amount amount = new Amount();
 		amount.setCurrency(currency);
 		amount.setTotal(String.format(Locale.forLanguageTag(currency), "%.2f", total));
@@ -57,6 +62,8 @@ public class PaypalService {
 	}
 	
 	public Payment executePayment(String paymentId, String payerId) throws PayPalRESTException {
+        log.info("Executing payment: paymentId={}, payerId={}", paymentId, payerId);
+
 		Payment payment = new Payment();
 		payment.setId(paymentId);
 		
