@@ -71,20 +71,20 @@ public class PaypalController {
     @GetMapping("/success")
     public RedirectView paymentSuccess(
     		@RequestParam ("paymentId") String paymentId,
-    		@RequestParam ("payerId") String payerId
+    		@RequestParam ("PayerID") String payerId
 		
 	) {
     	try {
 			Payment payment = paypalService.executePayment(paymentId, payerId);
 			if(payment.getState().equals("approved")) {
-				// return new RedirectView("http://localhost:4200/payment/success");
-				return new RedirectView("http://localhost:4200");
+				return new RedirectView("http://localhost:4200/payment/success");
+				// return new RedirectView("http://localhost:4200");
 			}
 		} catch (PayPalRESTException e) {
             log.error("Error while executing payment :: paymentSuccess ", e);
 
 		}
-    	return new RedirectView("http://localhost:4200");;
+    	return new RedirectView("http://localhost:4200");
     }
     
     @GetMapping("/cancel")
