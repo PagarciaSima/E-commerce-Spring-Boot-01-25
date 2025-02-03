@@ -2,6 +2,7 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,9 +23,11 @@ import lombok.extern.slf4j.Slf4j;
 public class RegistrationController {
 
 	private final RegistrationService registrationService;
+	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@PostMapping("/register")
 	public ResponseEntity<User> register(@RequestBody User user) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 	    log.info("Request to register new user with email: {}", user.getEmail());
 	    User registeredUser = registrationService.register(user);
 	    log.info("User registered successfully with email: {}", registeredUser.getEmail());
