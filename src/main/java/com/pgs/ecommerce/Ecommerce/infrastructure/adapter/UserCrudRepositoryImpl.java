@@ -2,6 +2,7 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.adapter;
 
 import com.pgs.ecommerce.Ecommerce.domain.model.User;
 import com.pgs.ecommerce.Ecommerce.domain.port.IUserRepository;
+import com.pgs.ecommerce.Ecommerce.infrastructure.entity.UserEntity;
 import com.pgs.ecommerce.Ecommerce.infrastructure.mapper.IUserMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -29,6 +30,8 @@ public class UserCrudRepositoryImpl implements IUserRepository {
 
     @Override
     public User findByEmail(String email) {
-        return null;
+        UserEntity userEntity = iUserCrudRepository.findByEmail(email)
+        		.orElseThrow(() -> new NoSuchElementException("No user found with email " + email));
+        return IUserMapper.toUser(userEntity);
     }
 }

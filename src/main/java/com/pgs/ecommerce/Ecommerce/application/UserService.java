@@ -1,7 +1,5 @@
 package com.pgs.ecommerce.Ecommerce.application;
 
-import java.io.File;
-import java.nio.file.Path;
 import java.util.NoSuchElementException;
 
 import com.pgs.ecommerce.Ecommerce.domain.model.User;
@@ -34,7 +32,7 @@ public class UserService {
         return user;
     }
     
-    public File getFileFromPath(Path path) {
-        return new File(path.toString());
+    public User findByEmail(String email) {
+    	return userRepository.findByEmail(email);
     }
 }
