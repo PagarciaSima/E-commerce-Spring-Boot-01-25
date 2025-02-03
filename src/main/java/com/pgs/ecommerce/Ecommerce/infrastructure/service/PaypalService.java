@@ -23,6 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PaypalService {
 
+	// Inject apicontext defined in config (from .env)
 	private final APIContext apiContext;
 	
 	public Payment createPayment(

@@ -1,5 +1,8 @@
 package com.pgs.ecommerce.Ecommerce.infrastructure.rest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -42,12 +45,14 @@ public class OrderController {
 	}
 
 	@PatchMapping("/update/state/order")
-	public ResponseEntity<String> updateStateById(@RequestParam Integer id, @RequestParam String state) {
+	public ResponseEntity<?> updateStateById(@RequestParam Integer id, @RequestParam String state) {
 		log.info("Request to update state of order with ID: {} to state: {}", id, state);
 		try {
 			this.orderService.updateStateId(id, state);
 			log.info("Order with ID: {} updated successfully to state: {}", id, state);
-			return new ResponseEntity<>("Update successful", HttpStatus.OK);
+			Map<String, String> response = new HashMap<>();
+	        response.put("message", "Update successful");
+	        return ResponseEntity.ok(response);
 		} catch (Exception e) {
 			log.error("Error updating order state for ID: {}: {}", id, e.getMessage(), e);
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

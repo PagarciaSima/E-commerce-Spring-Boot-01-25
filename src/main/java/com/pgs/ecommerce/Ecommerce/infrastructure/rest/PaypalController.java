@@ -28,6 +28,8 @@ public class PaypalController {
     private final PaypalService paypalService;
     private final String SUCCESS_URL = "http://localhost:8085/api/v1/payments/success";
     private final String CANCEL_URL = "http://localhost:8085/api/v1/payments/cancel";
+    private final String ERROR_URL = "http://localhost:8085/api/v1/payments/error"; 
+
 
     /**
      * Creates a PayPal payment and returns the approval URL.
@@ -70,27 +72,33 @@ public class PaypalController {
     
     @GetMapping("/success")
     public RedirectView paymentSuccess(
-    		@RequestParam ("paymentId") String paymentId,
-    		@RequestParam ("PayerID") String payerId
-		
-	) {
-    	try {
-			Payment payment = paypalService.executePayment(paymentId, payerId);
-			if(payment.getState().equals("approved")) {
-				return new RedirectView("http://localhost:4200/payment/success");
-				// return new RedirectView("http://localhost:4200");
-			}
-		} catch (PayPalRESTException e) {
+            @RequestParam ("paymentId") String paymentId,
+            @RequestParam ("PayerID") String payerId
+    ) {
+        try {
+            Payment payment = paypalService.executePayment(paymentId, payerId);
+            if(payment.getState().equals("approved")) {
+                return new RedirectView("http://localhost:4200/payment/success");
+            } else {
+                return new RedirectView(ERROR_URL);
+            }
+        } catch (PayPalRESTException e) {
             log.error("Error while executing payment :: paymentSuccess ", e);
-
-		}
-    	return new RedirectView("http://localhost:4200");
+            return new RedirectView(ERROR_URL);  
+        }
     }
-    
+
     @GetMapping("/cancel")
-    public RedirectView paymentCancelled(){
-    	log.info("Payment cancelled");
-		return new RedirectView("http://localhost:4200");
+    public RedirectView paymentCancelled() {
+        log.info("Payment cancelled");
+        return new RedirectView("http://localhost:4200");  
+    }
+
+    @GetMapping("/error")
+    public RedirectView paymentError() {
+        log.info("Payment error");
+        return new RedirectView("http://localhost:4200/payment/error");  
 
     }
+
 }
