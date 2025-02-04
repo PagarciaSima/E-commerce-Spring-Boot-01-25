@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/v1/payments")
+@RequestMapping("/api/v1/payments")
 @Slf4j
 public class PaypalController {
 

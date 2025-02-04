@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pgs.ecommerce.Ecommerce.application.RegistrationService;
+import com.pgs.ecommerce.Ecommerce.application.UserService;
 import com.pgs.ecommerce.Ecommerce.domain.model.User;
 
 import lombok.AllArgsConstructor;
@@ -23,15 +24,24 @@ import lombok.extern.slf4j.Slf4j;
 public class RegistrationController {
 
 	private final RegistrationService registrationService;
+	private final UserService userService;
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@PostMapping("/register")
-	public ResponseEntity<User> register(@RequestBody User user) {
-		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+	public ResponseEntity<?> register(@RequestBody User user) {
 	    log.info("Request to register new user with email: {}", user.getEmail());
+
+	    if (userService.findByEmail(user.getEmail()) != null ) {
+	        log.warn("Attempt to register with an existing email: {}", user.getEmail());
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email already in use");
+	    }
+
+	    user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+
 	    User registeredUser = registrationService.register(user);
 	    log.info("User registered successfully with email: {}", registeredUser.getEmail());
-	    return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
+
+	    return ResponseEntity.status(HttpStatus.CREATED).body(registeredUser);
 	}
 
 	

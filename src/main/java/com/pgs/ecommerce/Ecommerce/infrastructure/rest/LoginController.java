@@ -3,6 +3,7 @@ package com.pgs.ecommerce.Ecommerce.infrastructure.rest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("api/v1/security")
+@RequestMapping("/api/v1/security")
 @Slf4j
 @AllArgsConstructor
 public class LoginController {
@@ -27,15 +28,30 @@ public class LoginController {
 	private final  AuthenticationManager authenticationManager;
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> login (@RequestBody UserDTO dto) {
-		Authentication auth = authenticationManager.authenticate(
+	public ResponseEntity<String> login(@RequestBody UserDTO dto) {
+		try {
+			log.info("Attempting login for user: {}", dto.username());
+
+			Authentication auth = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(dto.username(), dto.password())
-		);
-		// Set the authenticated user in the application context
-		SecurityContextHolder.getContext().setAuthentication(auth);
-		
-		return new ResponseEntity<>("User logged successfully", HttpStatus.OK);
-				
+			);
+			SecurityContextHolder.getContext().setAuthentication(auth);
+
+			log.info("User '{}' logged in successfully", dto.username());
+			log.info("User '{}' has the following roles: {}", 
+				    dto.username(), 
+				    SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString()
+			);
+
+			return ResponseEntity.ok("User logged successfully");
+
+		} catch (BadCredentialsException e) {
+			log.warn("Failed login attempt for user: {}", dto.username());
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+		} catch (Exception e) {
+			log.error("Unexpected error during login: {}", e.getMessage());
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred");
+		}
 	}
 
 }

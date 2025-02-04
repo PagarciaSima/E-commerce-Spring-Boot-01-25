@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @CrossOrigin(origins = "http://localhost:4200/")
 @RestController
-@RequestMapping("api/v1/admin/products")
+@RequestMapping("/api/v1/admin/products")
 @Slf4j
 @AllArgsConstructor
 class ProductController {

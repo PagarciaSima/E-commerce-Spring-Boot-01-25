@@ -18,32 +18,32 @@ import com.pgs.ecommerce.Ecommerce.domain.port.IUserRepository;
 public class BeanConfiguration {
 	
 	@Bean
-    public UploadFileService uploadFileService () {
+    UploadFileService uploadFileService () {
         return new UploadFileService();
     }
 	
     @Bean
-    public UserService userService (IUserRepository userRepository) {
+    UserService userService (IUserRepository userRepository) {
         return new UserService(userRepository);
     }
 
     @Bean
-    public CategoryService categoryService (ICategoryRepository categoryRepository) {
+    CategoryService categoryService (ICategoryRepository categoryRepository) {
         return new CategoryService(categoryRepository);
     }
 
     @Bean
-    public ProductService productService (IProductRepository productRepository, UploadFileService fileService) {
+    ProductService productService (IProductRepository productRepository, UploadFileService fileService) {
         return new ProductService(productRepository, fileService);
     }
     
     @Bean
-    public OrderService orderService (IOrderRepository orderRepository) {
+    OrderService orderService (IOrderRepository orderRepository) {
         return new OrderService(orderRepository);
     }
     
     @Bean
-    public RegistrationService registrationService(IUserRepository iUserRepository) {
+    RegistrationService registrationService(IUserRepository iUserRepository) {
     	return new RegistrationService(iUserRepository);
     }
 
