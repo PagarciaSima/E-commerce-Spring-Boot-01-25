@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Implementation of the {@link IUserRepository} interface that interacts with the database
+ * to perform CRUD operations on {@link User} entities.
+ */
 @Repository
 @AllArgsConstructor
 public class UserCrudRepositoryImpl implements IUserRepository {
@@ -16,11 +20,24 @@ public class UserCrudRepositoryImpl implements IUserRepository {
     private final IUserCrudRepository iUserCrudRepository;
     private final IUserMapper IUserMapper;
 
+    /**
+     * Saves a {@link User} entity to the database.
+     *
+     * @param user the {@link User} entity to be saved
+     * @return the saved {@link User} entity
+     */
     @Override
     public User save(User user) {
         return IUserMapper.toUser(iUserCrudRepository.save(IUserMapper.toUserEntity(user)));
     }
 
+    /**
+     * Retrieves a {@link User} entity by its ID.
+     *
+     * @param id the ID of the {@link User} entity to retrieve
+     * @return the retrieved {@link User} entity
+     * @throws NoSuchElementException if no {@link User} entity with the specified ID is found
+     */
     @Override
     public User findById(Integer id) {
         return IUserMapper.toUser(iUserCrudRepository.findById(id).orElseThrow(
@@ -28,10 +45,17 @@ public class UserCrudRepositoryImpl implements IUserRepository {
         ));
     }
 
+    /**
+     * Retrieves a {@link User} entity by its email address.
+     *
+     * @param email the email address of the {@link User} entity to retrieve
+     * @return the retrieved {@link User} entity
+     * @throws NoSuchElementException if no {@link User} entity with the specified email is found
+     */
     @Override
     public User findByEmail(String email) {
         UserEntity userEntity = iUserCrudRepository.findByEmail(email)
-        		.orElseThrow(() -> new NoSuchElementException("No user found with email " + email));
+                .orElseThrow(() -> new NoSuchElementException("No user found with email " + email));
         return IUserMapper.toUser(userEntity);
     }
 }

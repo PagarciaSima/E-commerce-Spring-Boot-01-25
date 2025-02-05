@@ -18,6 +18,10 @@ import com.pgs.ecommerce.Ecommerce.infrastructure.service.PaypalService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Controller for handling PayPal payment operations.
+ * Provides endpoints to create payments and handle payment statuses.
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @AllArgsConstructor
@@ -30,12 +34,11 @@ public class PaypalController {
     private final String CANCEL_URL = "http://localhost:8085/api/v1/payments/cancel";
     private final String ERROR_URL = "http://localhost:8085/api/v1/payments/error"; 
 
-
     /**
      * Creates a PayPal payment and returns the approval URL.
      *
      * @param dataPayment The payment details received from the frontend.
-     * @return The PayPal approval URL or null if an error occurs.
+     * @return The PayPal approval URL or a default URL if an error occurs.
      */
     @PostMapping
     public UrlPaypalResponse createPayment(@RequestBody DataPayment dataPayment) {
@@ -70,14 +73,22 @@ public class PaypalController {
         return new UrlPaypalResponse("http://localhost:4200");
     }
     
+    /**
+     * Handles successful PayPal payments.
+     * Executes the payment and redirects the user based on the payment state.
+     *
+     * @param paymentId The PayPal payment ID.
+     * @param payerId The PayPal payer ID.
+     * @return A redirect to the appropriate URL based on payment success or failure.
+     */
     @GetMapping("/success")
     public RedirectView paymentSuccess(
-            @RequestParam ("paymentId") String paymentId,
-            @RequestParam ("PayerID") String payerId
+            @RequestParam("paymentId") String paymentId,
+            @RequestParam("PayerID") String payerId
     ) {
         try {
             Payment payment = paypalService.executePayment(paymentId, payerId);
-            if(payment.getState().equals("approved")) {
+            if ("approved".equals(payment.getState())) {
                 return new RedirectView("http://localhost:4200/payment/success");
             } else {
                 return new RedirectView(ERROR_URL);
@@ -88,17 +99,27 @@ public class PaypalController {
         }
     }
 
+    /**
+     * Handles canceled PayPal payments.
+     * Redirects the user to the home page upon payment cancellation.
+     *
+     * @return A redirect to the home page.
+     */
     @GetMapping("/cancel")
     public RedirectView paymentCancelled() {
         log.info("Payment cancelled");
         return new RedirectView("http://localhost:4200");  
     }
 
+    /**
+     * Handles errors during PayPal payments.
+     * Redirects the user to the error page upon payment failure.
+     *
+     * @return A redirect to the error page.
+     */
     @GetMapping("/error")
     public RedirectView paymentError() {
         log.info("Payment error");
         return new RedirectView("http://localhost:4200/payment/error");  
-
     }
-
 }

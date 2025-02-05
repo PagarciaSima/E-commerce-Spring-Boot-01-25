@@ -8,12 +8,21 @@ import com.pgs.ecommerce.Ecommerce.domain.port.IUserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service for managing user-related operations.
+ */
 @AllArgsConstructor
 @Slf4j
 public class UserService {
 
     private final IUserRepository userRepository;
 
+    /**
+     * Saves a new user in the repository.
+     *
+     * @param user The user to be saved.
+     * @return The saved user with assigned ID.
+     */
     public User save(User user) {
         log.info("Saving new user: {}", user);
         User savedUser = this.userRepository.save(user);
@@ -21,6 +30,14 @@ public class UserService {
         return savedUser;
     }
 
+    /**
+     * Finds a user by their ID.
+     * Throws an exception if the user is not found.
+     *
+     * @param id The ID of the user to find.
+     * @return The found user.
+     * @throws NoSuchElementException If no user is found with the given ID.
+     */
     public User findById(Integer id) {
         log.info("Fetching user with ID: {}", id);
         User user = this.userRepository.findById(id);
@@ -32,7 +49,13 @@ public class UserService {
         return user;
     }
     
+    /**
+     * Finds a user by their email.
+     *
+     * @param email The email of the user to find.
+     * @return The user with the given email.
+     */
     public User findByEmail(String email) {
-    	return userRepository.findByEmail(email);
+        return userRepository.findByEmail(email);
     }
 }

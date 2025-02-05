@@ -12,15 +12,27 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * REST controller for managing products in the e-commerce platform. 
+ * Provides endpoints for saving, updating, retrieving, and deleting products, 
+ * as well as uploading images for products.
+ */
 @CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping("/api/v1/admin/products")
 @Slf4j
 @AllArgsConstructor
-class ProductController {
+public class ProductController {
 
     private final ProductService productService;
-    
+
+    /**
+     * Creates a new product and optionally associates an image with it.
+     * 
+     * @param product The product to be created.
+     * @param image The image to be associated with the product (optional).
+     * @return ResponseEntity containing the saved product and the status code.
+     */
     @PostMapping(consumes = {"multipart/form-data"})
     public ResponseEntity<Product> save(
             @RequestPart("product") Product product,
@@ -38,7 +50,15 @@ class ProductController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-    
+
+    /**
+     * Updates an existing product and optionally updates its image.
+     * 
+     * @param id The ID of the product to be updated.
+     * @param product The updated product data.
+     * @param image The new image to be associated with the product (optional).
+     * @return ResponseEntity containing the updated product and the status code.
+     */
     @PutMapping(value = "{id}", consumes = {"multipart/form-data"})
     public ResponseEntity<Product> update(
             @PathVariable Integer id,
@@ -57,7 +77,12 @@ class ProductController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-    
+
+    /**
+     * Retrieves all products in the system.
+     * 
+     * @return ResponseEntity containing the list of all products.
+     */
     @GetMapping
     public ResponseEntity<Iterable<Product>> findAll() {
         log.info("Fetching all products...");
@@ -66,6 +91,12 @@ class ProductController {
         return ResponseEntity.ok(products);
     }
 
+    /**
+     * Retrieves a product by its ID.
+     * 
+     * @param id The ID of the product to retrieve.
+     * @return ResponseEntity containing the product and the status code.
+     */
     @GetMapping("{id}")
     public ResponseEntity<Product> findById(@PathVariable Integer id) {
         log.info("Fetching product with id: {}", id);
@@ -79,6 +110,12 @@ class ProductController {
         }
     }
 
+    /**
+     * Deletes a product by its ID.
+     * 
+     * @param id The ID of the product to delete.
+     * @return ResponseEntity with no content if successful, or error status if failed.
+     */
     @DeleteMapping("{id}")
     public ResponseEntity<Product> deleteById(@PathVariable Integer id) {
         log.warn("Deleting product with id: {}", id);

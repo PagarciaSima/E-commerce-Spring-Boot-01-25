@@ -20,6 +20,20 @@ import com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JWTGenerator;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * The LoginController class handles user authentication requests.
+ * It provides an endpoint for users to log in and receive a JWT upon successful authentication.
+ * 
+ * This controller uses {@link AuthenticationManager} to authenticate user credentials
+ * and {@link JWTGenerator} to generate JWT tokens for authenticated users.
+ * 
+ * Cross-origin requests are allowed from http://localhost:4200.
+ * 
+ * @see AuthenticationManager
+ * @see JWTGenerator
+ * @see UserDTO
+ * @see JWTClient
+ */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/security")
@@ -27,9 +41,16 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class LoginController {
 	
-	private final  AuthenticationManager authenticationManager;
+	private final AuthenticationManager authenticationManager;
 	private final JWTGenerator jwtGenerator;
 	
+	/**
+	 * Authenticates a user based on the provided credentials.
+	 * 
+	 * @param dto The user's login credentials.
+	 * @return A {@link ResponseEntity} containing a {@link JWTClient} with the JWT token if authentication is successful,
+	 *         or an error message if authentication fails.
+	 */
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody UserDTO dto) {
 		try {
