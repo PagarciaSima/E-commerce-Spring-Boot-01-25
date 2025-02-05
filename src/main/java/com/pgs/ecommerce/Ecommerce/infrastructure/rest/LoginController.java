@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pgs.ecommerce.Ecommerce.infrastructure.dto.JWTClient;
 import com.pgs.ecommerce.Ecommerce.infrastructure.dto.UserDTO;
+import com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JWTGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,9 +28,10 @@ import lombok.extern.slf4j.Slf4j;
 public class LoginController {
 	
 	private final  AuthenticationManager authenticationManager;
+	private final JWTGenerator jwtGenerator;
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> login(@RequestBody UserDTO dto) {
+	public ResponseEntity<?> login(@RequestBody UserDTO dto) {
 		try {
 			log.info("Attempting login for user: {}", dto.username());
 
@@ -42,8 +45,9 @@ public class LoginController {
 				    dto.username(), 
 				    SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString()
 			);
-
-			return ResponseEntity.ok("User logged successfully");
+			
+			String token = jwtGenerator.getToken(dto.username());
+			return ResponseEntity.ok(new JWTClient(token));
 
 		} catch (BadCredentialsException e) {
 			log.warn("Failed login attempt for user: {}", dto.username());
