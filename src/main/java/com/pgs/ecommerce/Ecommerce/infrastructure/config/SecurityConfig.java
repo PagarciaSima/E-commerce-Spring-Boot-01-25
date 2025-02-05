@@ -30,6 +30,7 @@ public class SecurityConfig {
 				.requestMatchers("/api/v1/orders/**").hasRole("USER")
 				.requestMatchers("/api/v1/payments/**").hasRole("USER")
 				.requestMatchers("/api/v1/security/**").permitAll()
+				.requestMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs", "/v3/api-docs/**", "/actuator/**").permitAll()
 				.anyRequest().authenticated()
 		).addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 		return httpSecurity.build();

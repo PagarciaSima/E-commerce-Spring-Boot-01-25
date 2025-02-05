@@ -16,6 +16,11 @@ import com.pgs.ecommerce.Ecommerce.domain.model.User;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
 /**
  * Controller responsible for user registration operations.
  * It handles the registration process including validating email uniqueness,
@@ -39,8 +44,16 @@ public class RegistrationController {
      * @param user The user to be registered, containing the user's email and password.
      * @return A ResponseEntity containing the registered user object or an error message.
      */
+    @Operation(summary = "Register a new user", description = "Validates the email, encodes the password, and registers the user.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "User registered successfully"),
+        @ApiResponse(responseCode = "400", description = "Email already in use"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody User user) {
+    public ResponseEntity<?> register(
+            @Parameter(description = "User object containing the email and password to be registered", required = true)
+            @RequestBody User user) {
         log.info("Request to register new user with email: {}", user.getEmail());
 
         // Check if the email is already in use

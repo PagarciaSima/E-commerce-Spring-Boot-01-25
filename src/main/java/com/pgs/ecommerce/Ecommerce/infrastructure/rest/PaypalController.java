@@ -15,6 +15,7 @@ import com.pgs.ecommerce.Ecommerce.domain.model.DataPayment;
 import com.pgs.ecommerce.Ecommerce.domain.model.UrlPaypalResponse;
 import com.pgs.ecommerce.Ecommerce.infrastructure.service.PaypalService;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,6 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @RequestMapping("/api/v1/payments")
 @Slf4j
+@Hidden  // This hides the entire controller from OpenAPI documentation
 public class PaypalController {
 
     private final PaypalService paypalService;

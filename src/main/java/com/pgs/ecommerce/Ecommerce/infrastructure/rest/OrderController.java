@@ -18,6 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pgs.ecommerce.Ecommerce.application.OrderService;
 import com.pgs.ecommerce.Ecommerce.domain.model.Order;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,6 +36,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/api/v1/orders")
 @Slf4j
 @AllArgsConstructor
+@Tag(name = "Orders", description = "API for managing product orders")
+@SecurityRequirement(name = "bearerAuth")  
 public class OrderController {
 
     private final OrderService orderService;
@@ -40,6 +48,11 @@ public class OrderController {
      * @param order the order to be created
      * @return the created order
      */
+    @Operation(summary = "Create a new order", description = "Creates a new order and returns the created order.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully created the order"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @PostMapping
     public ResponseEntity<Order> save(@RequestBody Order order) {
         log.info("Request to save order: {}", order);
@@ -60,8 +73,15 @@ public class OrderController {
      * @param state the new state of the order
      * @return a response indicating the outcome of the update operation
      */
+    @Operation(summary = "Update the state of an order", description = "Updates the state of an existing order by its ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully updated the order state"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @PatchMapping("/update/state/order")
-    public ResponseEntity<?> updateStateById(@RequestParam Integer id, @RequestParam String state) {
+    public ResponseEntity<?> updateStateById(
+            @Parameter(description = "The ID of the order to be updated") @RequestParam Integer id,
+            @Parameter(description = "The new state of the order") @RequestParam String state) {
         log.info("Request to update state of order with ID: {} to state: {}", id, state);
         try {
             this.orderService.updateStateId(id, state);
@@ -80,6 +100,11 @@ public class OrderController {
      *
      * @return a list of all orders
      */
+    @Operation(summary = "Get all orders", description = "Retrieves a list of all orders in the system.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully retrieved the orders"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @GetMapping
     public ResponseEntity<Iterable<Order>> findAll() {
         log.info("Request to retrieve all orders");
@@ -99,6 +124,12 @@ public class OrderController {
      * @param id the ID of the order to be retrieved
      * @return the order with the specified ID, or a 404 status if not found
      */
+    @Operation(summary = "Get order by ID", description = "Retrieves an order by its unique ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully retrieved the order"),
+        @ApiResponse(responseCode = "404", description = "Order not found"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @GetMapping("{id}")
     public ResponseEntity<Order> findByID(@PathVariable Integer id) {
         log.info("Request to retrieve order with ID: {}", id);
@@ -123,6 +154,11 @@ public class OrderController {
      * @param id the ID of the user
      * @return a list of orders associated with the specified user
      */
+    @Operation(summary = "Get orders by user ID", description = "Retrieves all orders associated with a specific user.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully retrieved orders for the user"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
     @GetMapping("/by-user/{id}")
     public ResponseEntity<Iterable<Order>> findByUserID(@PathVariable Integer id) {
         log.info("Request to retrieve orders for user with ID: {}", id);
