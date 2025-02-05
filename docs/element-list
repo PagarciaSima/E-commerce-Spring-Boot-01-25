@@ -1,0 +1,5 @@
+com.pgs.ecommerce.Ecommerce.application
+com.pgs.ecommerce.Ecommerce.infrastructure.adapter
+com.pgs.ecommerce.Ecommerce.infrastructure.jwt
+com.pgs.ecommerce.Ecommerce.infrastructure.rest
+com.pgs.ecommerce.Ecommerce.infrastructure.service

@@ -30,6 +30,15 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private CustomUserDetailService customUserDetailService;
     
+    
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+        String path = request.getRequestURI();
+        // Excluir la ruta de login del filtro JWT
+        return path.startsWith("/api/v1/security/login");
+    }
+    
+    
     /**
      * Processes the incoming request to check for a valid JWT token.
      * If the token is valid, it extracts the claims and sets authentication in the security context.
