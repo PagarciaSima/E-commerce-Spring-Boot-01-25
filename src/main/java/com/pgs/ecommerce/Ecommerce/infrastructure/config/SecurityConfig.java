@@ -1,5 +1,7 @@
 package com.pgs.ecommerce.Ecommerce.infrastructure.config;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -9,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JwtAuthorizationFilter;
@@ -25,7 +27,19 @@ public class SecurityConfig implements WebMvcConfigurer{
 	
 	@Bean
     SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf(csrf -> csrf.disable()).authorizeHttpRequests(
+        httpSecurity
+        		.cors(
+    				cors -> cors.configurationSource(
+    					request -> {
+    						CorsConfiguration configuration = new CorsConfiguration();
+    						configuration.setAllowedOrigins(Arrays.asList("*"));
+    						configuration.setAllowedMethods(Arrays.asList("*"));
+    						configuration.setAllowedHeaders(Arrays.asList("*"));
+    						return configuration;
+    					}
+					)
+				)
+        		.csrf(csrf -> csrf.disable()).authorizeHttpRequests(
                 auth -> 
                 auth
                     .requestMatchers("/api/v1/admin/categories/**").hasRole("ADMIN")
