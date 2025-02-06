@@ -49,13 +49,12 @@ public class UserCrudRepositoryImpl implements IUserRepository {
      * Retrieves a {@link User} entity by its email address.
      *
      * @param email the email address of the {@link User} entity to retrieve
-     * @return the retrieved {@link User} entity
-     * @throws NoSuchElementException if no {@link User} entity with the specified email is found
+     * @return the retrieved {@link User} entity or null if not found
      */
     @Override
     public User findByEmail(String email) {
         UserEntity userEntity = iUserCrudRepository.findByEmail(email)
-                .orElseThrow(() -> new NoSuchElementException("No user found with email " + email));
+                .orElse(null);
         return IUserMapper.toUser(userEntity);
     }
 }

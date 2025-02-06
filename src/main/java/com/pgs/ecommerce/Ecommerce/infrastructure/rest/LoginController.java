@@ -9,15 +9,17 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pgs.ecommerce.Ecommerce.application.UserService;
+import com.pgs.ecommerce.Ecommerce.domain.model.User;
 import com.pgs.ecommerce.Ecommerce.infrastructure.dto.JWTClient;
 import com.pgs.ecommerce.Ecommerce.infrastructure.dto.UserDTO;
 import com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JWTGenerator;
 
 import io.swagger.v3.oas.annotations.Operation;
-import org.springframework.web.bind.annotation.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -38,6 +40,7 @@ public class LoginController {
 
     private final AuthenticationManager authenticationManager;
     private final JWTGenerator jwtGenerator;
+    private final UserService userService;
 
     /**
      * Authenticates a user based on the provided credentials.
@@ -68,10 +71,12 @@ public class LoginController {
                     dto.username(), 
                     SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString()
             );
+            
+            User user = userService.findByEmail(dto.username());
 
             // Generate JWT token
             String token = jwtGenerator.getToken(dto.username());
-            return ResponseEntity.ok(new JWTClient(token));
+            return ResponseEntity.ok(new JWTClient(user.getId(), token));
 
         } catch (BadCredentialsException e) {
             log.warn("Failed login attempt for user: {}", dto.username());

@@ -35,7 +35,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
         // Excluir la ruta de login del filtro JWT
-        return path.startsWith("/api/v1/security/login");
+        return path.startsWith("/api/v1/security/login") || path.startsWith("/api/v1/security/register");
     }
     
     
