@@ -76,7 +76,7 @@ public class LoginController {
 
             // Generate JWT token
             String token = jwtGenerator.getToken(dto.username());
-            return ResponseEntity.ok(new JWTClient(user.getId(), token));
+            return ResponseEntity.ok(new JWTClient(user.getId(), token, user.getUserType().toString()));
 
         } catch (BadCredentialsException e) {
             log.warn("Failed login attempt for user: {}", dto.username());
