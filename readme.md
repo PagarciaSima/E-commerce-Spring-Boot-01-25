@@ -63,11 +63,11 @@ The frontend of the application is built with Angular and can be found at:
 ![products](img/admin_products.png)
 
 ### Admin / Create-Edit products
-![Form product](img/admin_new_products.png)
+![Form product](img/admin_new_product.png)
 
 ### Admin / Categories
 
-![categories](img/categories.png)
+![categories](img/admin_categories.png)
 
 ### User / Home
 ![user home](img/user_home.png)
