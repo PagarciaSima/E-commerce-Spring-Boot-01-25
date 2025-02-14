@@ -1,0 +1,701 @@
+2025-02-08 06:39:31 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=14h37m2s560ms365µs200ns).
+2025-02-08 11:32:55 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=4h51m52s5ms355µs400ns).
+2025-02-08 11:46:55 - Attempting login for user: pgs2@hotmail.com
+2025-02-08 11:46:55 - Failed login attempt for user: pgs2@hotmail.com
+2025-02-08 11:47:01 - Attempting login for user: pgs2@hotmail.com
+2025-02-08 11:47:01 - User 'pgs2@hotmail.com' logged in successfully
+2025-02-08 11:47:01 - User 'pgs2@hotmail.com' has the following roles: [ROLE_ADMIN]
+2025-02-08 11:47:01 - Generating JWT token for user: pgs2@hotmail.com
+2025-02-08 11:47:01 - JWT token successfully generated for user: pgs2@hotmail.com
+2025-02-08 11:47:01 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 11:47:01 - Token found in request header.
+2025-02-08 11:47:01 - JWT token detected, extracting claims...
+2025-02-08 11:47:01 - Extracting claims from JWT.
+2025-02-08 11:47:01 - Claims extracted successfully.
+2025-02-08 11:47:01 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:47:01 - Authorities found, setting authentication.
+2025-02-08 11:47:01 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:47:01 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:47:01 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:47:01 - Fetching all products...
+2025-02-08 11:47:01 - Fetching all products
+2025-02-08 11:47:01 - Retrieved 8 products
+2025-02-08 11:47:01 - Fetched 8 products
+2025-02-08 11:47:58 - Processing JWT authentication for request: /api/v1/admin/categories
+2025-02-08 11:47:58 - Token found in request header.
+2025-02-08 11:47:58 - JWT token detected, extracting claims...
+2025-02-08 11:47:58 - Extracting claims from JWT.
+2025-02-08 11:47:58 - Claims extracted successfully.
+2025-02-08 11:47:58 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:47:58 - Authorities found, setting authentication.
+2025-02-08 11:47:58 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:47:58 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:47:58 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:47:58 - Fetching all categories...
+2025-02-08 11:47:58 - Fetching all categories
+2025-02-08 11:47:58 - Retrieved categories
+2025-02-08 11:47:58 - Fetched 4 categories
+2025-02-08 11:48:47 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 11:48:47 - Token found in request header.
+2025-02-08 11:48:47 - JWT token detected, extracting claims...
+2025-02-08 11:48:47 - Extracting claims from JWT.
+2025-02-08 11:48:47 - Claims extracted successfully.
+2025-02-08 11:48:47 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:48:47 - Authorities found, setting authentication.
+2025-02-08 11:48:47 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:48:47 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:48:47 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:48:47 - Fetching all products...
+2025-02-08 11:48:47 - Fetching all products
+2025-02-08 11:48:47 - Retrieved 8 products
+2025-02-08 11:48:47 - Fetched 8 products
+2025-02-08 11:48:49 - Processing JWT authentication for request: /api/v1/admin/products/1
+2025-02-08 11:48:49 - Token found in request header.
+2025-02-08 11:48:49 - JWT token detected, extracting claims...
+2025-02-08 11:48:49 - Extracting claims from JWT.
+2025-02-08 11:48:49 - Processing JWT authentication for request: /api/v1/admin/categories
+2025-02-08 11:48:49 - Token found in request header.
+2025-02-08 11:48:49 - JWT token detected, extracting claims...
+2025-02-08 11:48:49 - Extracting claims from JWT.
+2025-02-08 11:48:49 - Claims extracted successfully.
+2025-02-08 11:48:49 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:48:49 - Authorities found, setting authentication.
+2025-02-08 11:48:49 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:48:49 - Claims extracted successfully.
+2025-02-08 11:48:49 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:48:49 - Authorities found, setting authentication.
+2025-02-08 11:48:49 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:48:49 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:48:49 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:48:49 - Fetching all categories...
+2025-02-08 11:48:49 - Fetching all categories
+2025-02-08 11:48:49 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:48:49 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:48:49 - Retrieved categories
+2025-02-08 11:48:49 - Fetched 4 categories
+2025-02-08 11:48:49 - Fetching product with id: 1
+2025-02-08 11:48:49 - Fetching product with ID: 1
+2025-02-08 11:48:49 - Product retrieved successfully: Product(id=1, name=Amazon Fire TV, code=PROD_2025-01-27_bacb7, description=TV, urlImage=http://localhost:8085/images/Televisión inteligente Amazon Fire TV.jpg, price=1000.00, dateCreated=2025-01-27T14:41:04.333659, dateUpdated=2025-01-27T14:41:04.333659, userId=1, categoryId=3)
+2025-02-08 11:48:49 - Product found: Amazon Fire TV
+2025-02-08 11:48:53 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 11:48:53 - Token found in request header.
+2025-02-08 11:48:53 - JWT token detected, extracting claims...
+2025-02-08 11:48:53 - Extracting claims from JWT.
+2025-02-08 11:48:53 - Claims extracted successfully.
+2025-02-08 11:48:53 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739011621, exp=1739015221}
+2025-02-08 11:48:53 - Authorities found, setting authentication.
+2025-02-08 11:48:53 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:48:53 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:48:53 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:48:53 - Fetching all products...
+2025-02-08 11:48:53 - Fetching all products
+2025-02-08 11:48:53 - Retrieved 8 products
+2025-02-08 11:48:53 - Fetched 8 products
+2025-02-08 11:56:13 - Attempting login for user: pgs2@hotmail.com
+2025-02-08 11:56:13 - User 'pgs2@hotmail.com' logged in successfully
+2025-02-08 11:56:13 - User 'pgs2@hotmail.com' has the following roles: [ROLE_ADMIN]
+2025-02-08 11:56:13 - Generating JWT token for user: pgs2@hotmail.com
+2025-02-08 11:56:13 - JWT token successfully generated for user: pgs2@hotmail.com
+2025-02-08 11:56:13 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 11:56:13 - Token found in request header.
+2025-02-08 11:56:13 - JWT token detected, extracting claims...
+2025-02-08 11:56:13 - Extracting claims from JWT.
+2025-02-08 11:56:13 - Claims extracted successfully.
+2025-02-08 11:56:13 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739012173, exp=1739015773}
+2025-02-08 11:56:13 - Authorities found, setting authentication.
+2025-02-08 11:56:13 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:56:13 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:56:13 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:56:13 - Fetching all products...
+2025-02-08 11:56:13 - Fetching all products
+2025-02-08 11:56:13 - Retrieved 8 products
+2025-02-08 11:56:13 - Fetched 8 products
+2025-02-08 11:56:18 - Processing JWT authentication for request: /api/v1/admin/categories
+2025-02-08 11:56:18 - Token found in request header.
+2025-02-08 11:56:18 - JWT token detected, extracting claims...
+2025-02-08 11:56:18 - Extracting claims from JWT.
+2025-02-08 11:56:18 - Claims extracted successfully.
+2025-02-08 11:56:18 - Claims extracted: {jti=E-commerce, sub=pgs2@hotmail.com, authorities=[ROLE_ADMIN], iat=1739012173, exp=1739015773}
+2025-02-08 11:56:18 - Authorities found, setting authentication.
+2025-02-08 11:56:18 - Attempting authentication for user: pgs2@hotmail.com
+2025-02-08 11:56:18 - User found: pgs2@hotmail.com. Creating authentication token.
+2025-02-08 11:56:18 - User pgs2@hotmail.com authenticated successfully.
+2025-02-08 11:56:18 - Fetching all categories...
+2025-02-08 11:56:18 - Fetching all categories
+2025-02-08 11:56:18 - Retrieved categories
+2025-02-08 11:56:18 - Fetched 4 categories
+2025-02-08 11:59:19 - Attempting login for user: pgs@hotmail.com
+2025-02-08 11:59:20 - User 'pgs@hotmail.com' logged in successfully
+2025-02-08 11:59:20 - User 'pgs@hotmail.com' has the following roles: [ROLE_USER]
+2025-02-08 11:59:20 - Generating JWT token for user: pgs@hotmail.com
+2025-02-08 11:59:20 - JWT token successfully generated for user: pgs@hotmail.com
+2025-02-08 11:59:20 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 11:59:20 - Token found in request header.
+2025-02-08 11:59:20 - JWT token detected, extracting claims...
+2025-02-08 11:59:20 - Extracting claims from JWT.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 11:59:20 - Token found in request header.
+2025-02-08 11:59:20 - JWT token detected, extracting claims...
+2025-02-08 11:59:20 - Extracting claims from JWT.
+2025-02-08 11:59:20 - Claims extracted successfully.
+2025-02-08 11:59:20 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 11:59:20 - Authorities found, setting authentication.
+2025-02-08 11:59:20 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 11:59:20 - Claims extracted successfully.
+2025-02-08 11:59:20 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 11:59:20 - Authorities found, setting authentication.
+2025-02-08 11:59:20 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 11:59:20 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 11:59:20 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 11:59:20 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 11:59:20 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 11:59:20 - Fetching all products...
+2025-02-08 11:59:20 - Fetching all products
+2025-02-08 11:59:20 - Received request to find user with ID: 1
+2025-02-08 11:59:20 - Fetching user with ID: 1
+2025-02-08 11:59:20 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 11:59:20 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 11:59:20 - Retrieved 8 products
+2025-02-08 11:59:20 - Fetched 8 products
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/impresora.jpg
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/Televisi%C3%B3n%20inteligente%20Amazon%20Fire%20TV.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/Apple%20MacBook%20Pro%202022.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/HP%20Pavilion%2015.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/Laptop%20Lenovo%20Ideapad%203%202022.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/E-YOOSO.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/default.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 11:59:20 - Processing JWT authentication for request: /images/Logitech%20M510.jpg
+2025-02-08 11:59:20 - Token not found or invalid format.
+2025-02-08 11:59:20 - No valid JWT token found. Clearing security context.
+2025-02-08 12:00:59 - Processing JWT authentication for request: /api/v1/admin/products/3
+2025-02-08 12:00:59 - Token found in request header.
+2025-02-08 12:00:59 - JWT token detected, extracting claims...
+2025-02-08 12:00:59 - Extracting claims from JWT.
+2025-02-08 12:00:59 - Claims extracted successfully.
+2025-02-08 12:00:59 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:00:59 - Authorities found, setting authentication.
+2025-02-08 12:00:59 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:00:59 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:00:59 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:00:59 - Fetching product with id: 3
+2025-02-08 12:00:59 - Fetching product with ID: 3
+2025-02-08 12:00:59 - Product retrieved successfully: Product(id=3, name=Apple MacBook Pro 2022, code=PROD_2025-01-28_3dae1, description=PC, urlImage=http://localhost:8085/images/Apple MacBook Pro 2022.jpg, price=800.00, dateCreated=2025-01-27T14:41:04.333659, dateUpdated=2025-01-28T14:54:51.887586, userId=1, categoryId=4)
+2025-02-08 12:00:59 - Product found: Apple MacBook Pro 2022
+2025-02-08 12:00:59 - Processing JWT authentication for request: /images/Apple%20MacBook%20Pro%202022.jpg
+2025-02-08 12:00:59 - Token not found or invalid format.
+2025-02-08 12:00:59 - No valid JWT token found. Clearing security context.
+2025-02-08 12:02:12 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:02:12 - Token found in request header.
+2025-02-08 12:02:12 - JWT token detected, extracting claims...
+2025-02-08 12:02:12 - Extracting claims from JWT.
+2025-02-08 12:02:12 - Claims extracted successfully.
+2025-02-08 12:02:12 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:02:12 - Authorities found, setting authentication.
+2025-02-08 12:02:12 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:02:12 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:02:12 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:02:12 - Received request to find user with ID: 1
+2025-02-08 12:02:12 - Fetching user with ID: 1
+2025-02-08 12:02:12 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:02:12 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:03:11 - Processing JWT authentication for request: /api/v1/orders
+2025-02-08 12:03:11 - Token found in request header.
+2025-02-08 12:03:11 - JWT token detected, extracting claims...
+2025-02-08 12:03:11 - Extracting claims from JWT.
+2025-02-08 12:03:11 - Claims extracted successfully.
+2025-02-08 12:03:11 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:03:11 - Authorities found, setting authentication.
+2025-02-08 12:03:11 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:03:11 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:03:11 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:03:11 - Request to save order: Order(id=null, dateCreated=2025-02-08T11:03:11.617, orderProducts=[OrderProduct(id=null, quantity=2, price=800, ProductId=3)], orderState=CANCELLED, userId=1)
+2025-02-08 12:03:11 - Saving new order: Order(id=null, dateCreated=2025-02-08T11:03:11.617, orderProducts=[OrderProduct(id=null, quantity=2, price=800, ProductId=3)], orderState=CANCELLED, userId=1)
+2025-02-08 12:03:11 - Order saved successfully with ID: 40
+2025-02-08 12:03:11 - Order saved successfully with ID: 40
+2025-02-08 12:03:11 - Processing JWT authentication for request: /api/v1/payments
+2025-02-08 12:03:11 - Token found in request header.
+2025-02-08 12:03:11 - JWT token detected, extracting claims...
+2025-02-08 12:03:11 - Extracting claims from JWT.
+2025-02-08 12:03:11 - Claims extracted successfully.
+2025-02-08 12:03:11 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:03:11 - Authorities found, setting authentication.
+2025-02-08 12:03:11 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:03:11 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:03:11 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:03:11 - Received payment request: DataPayment(method=PAYPAL, amount=1600, currency=USD, description=Payment for Order ID 40)
+2025-02-08 12:03:11 - Starting payment creation: total=1600.0, currency=USD, method=PAYPAL, intent=SALE
+2025-02-08 12:03:13 - Payment created successfully: PAYID-M6TTT4A11S411008Y000034P
+2025-02-08 12:04:40 - Processing JWT authentication for request: /api/v1/payments/success
+2025-02-08 12:04:40 - Token not found or invalid format.
+2025-02-08 12:04:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:04:40 - Executing payment: paymentId=PAYID-M6TTT4A11S411008Y000034P, payerId=JWL5GECXY8HVY
+2025-02-08 12:04:51 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:04:51 - Token found in request header.
+2025-02-08 12:04:51 - JWT token detected, extracting claims...
+2025-02-08 12:04:51 - Extracting claims from JWT.
+2025-02-08 12:04:51 - Claims extracted successfully.
+2025-02-08 12:04:51 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:04:51 - Authorities found, setting authentication.
+2025-02-08 12:04:51 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:04:51 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:04:51 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:04:51 - Received request to find user with ID: 1
+2025-02-08 12:04:51 - Fetching user with ID: 1
+2025-02-08 12:04:51 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:04:51 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:06 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:05:06 - Token found in request header.
+2025-02-08 12:05:06 - JWT token detected, extracting claims...
+2025-02-08 12:05:06 - Extracting claims from JWT.
+2025-02-08 12:05:06 - Claims extracted successfully.
+2025-02-08 12:05:06 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:06 - Authorities found, setting authentication.
+2025-02-08 12:05:06 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:06 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:06 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:06 - Received request to find user with ID: 1
+2025-02-08 12:05:06 - Fetching user with ID: 1
+2025-02-08 12:05:06 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:06 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:18 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:05:18 - Token found in request header.
+2025-02-08 12:05:18 - JWT token detected, extracting claims...
+2025-02-08 12:05:18 - Extracting claims from JWT.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 12:05:18 - Token found in request header.
+2025-02-08 12:05:18 - JWT token detected, extracting claims...
+2025-02-08 12:05:18 - Extracting claims from JWT.
+2025-02-08 12:05:18 - Claims extracted successfully.
+2025-02-08 12:05:18 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:18 - Authorities found, setting authentication.
+2025-02-08 12:05:18 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:18 - Claims extracted successfully.
+2025-02-08 12:05:18 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:18 - Authorities found, setting authentication.
+2025-02-08 12:05:18 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:18 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:18 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:18 - Fetching all products...
+2025-02-08 12:05:18 - Fetching all products
+2025-02-08 12:05:18 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:18 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:18 - Received request to find user with ID: 1
+2025-02-08 12:05:18 - Fetching user with ID: 1
+2025-02-08 12:05:18 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:18 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:18 - Retrieved 8 products
+2025-02-08 12:05:18 - Fetched 8 products
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/Televisi%C3%B3n%20inteligente%20Amazon%20Fire%20TV.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/impresora.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/Apple%20MacBook%20Pro%202022.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/HP%20Pavilion%2015.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/Laptop%20Lenovo%20Ideapad%203%202022.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/E-YOOSO.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/default.jpg
+2025-02-08 12:05:18 - Processing JWT authentication for request: /images/Logitech%20M510.jpg
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:18 - Token not found or invalid format.
+2025-02-08 12:05:18 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:21 - Processing JWT authentication for request: /api/v1/admin/products/4
+2025-02-08 12:05:21 - Token found in request header.
+2025-02-08 12:05:21 - JWT token detected, extracting claims...
+2025-02-08 12:05:21 - Extracting claims from JWT.
+2025-02-08 12:05:21 - Claims extracted successfully.
+2025-02-08 12:05:21 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:21 - Authorities found, setting authentication.
+2025-02-08 12:05:21 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:21 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:21 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:21 - Fetching product with id: 4
+2025-02-08 12:05:21 - Fetching product with ID: 4
+2025-02-08 12:05:21 - Product retrieved successfully: Product(id=4, name=HP Pavilion 15, code=PROD_2025-01-28_3dae2, description=PC, urlImage=http://localhost:8085/images/HP Pavilion 15.jpg, price=1030.00, dateCreated=2025-01-27T14:41:04.333659, dateUpdated=2025-01-28T14:54:51.887586, userId=1, categoryId=4)
+2025-02-08 12:05:21 - Product found: HP Pavilion 15
+2025-02-08 12:05:21 - Processing JWT authentication for request: /images/HP%20Pavilion%2015.jpg
+2025-02-08 12:05:21 - Token not found or invalid format.
+2025-02-08 12:05:21 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:26 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:05:26 - Token found in request header.
+2025-02-08 12:05:26 - JWT token detected, extracting claims...
+2025-02-08 12:05:26 - Extracting claims from JWT.
+2025-02-08 12:05:26 - Claims extracted successfully.
+2025-02-08 12:05:26 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:26 - Authorities found, setting authentication.
+2025-02-08 12:05:26 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:26 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:26 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:26 - Received request to find user with ID: 1
+2025-02-08 12:05:26 - Fetching user with ID: 1
+2025-02-08 12:05:26 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:26 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:28 - Processing JWT authentication for request: /api/v1/orders
+2025-02-08 12:05:28 - Token found in request header.
+2025-02-08 12:05:28 - JWT token detected, extracting claims...
+2025-02-08 12:05:28 - Extracting claims from JWT.
+2025-02-08 12:05:28 - Claims extracted successfully.
+2025-02-08 12:05:28 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:28 - Authorities found, setting authentication.
+2025-02-08 12:05:28 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:28 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:28 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:28 - Request to save order: Order(id=null, dateCreated=2025-02-08T11:05:28.537, orderProducts=[OrderProduct(id=null, quantity=1, price=1030, ProductId=4)], orderState=CANCELLED, userId=1)
+2025-02-08 12:05:28 - Saving new order: Order(id=null, dateCreated=2025-02-08T11:05:28.537, orderProducts=[OrderProduct(id=null, quantity=1, price=1030, ProductId=4)], orderState=CANCELLED, userId=1)
+2025-02-08 12:05:28 - Order saved successfully with ID: 41
+2025-02-08 12:05:28 - Order saved successfully with ID: 41
+2025-02-08 12:05:28 - Processing JWT authentication for request: /api/v1/payments
+2025-02-08 12:05:28 - Token found in request header.
+2025-02-08 12:05:28 - JWT token detected, extracting claims...
+2025-02-08 12:05:28 - Extracting claims from JWT.
+2025-02-08 12:05:28 - Claims extracted successfully.
+2025-02-08 12:05:28 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:28 - Authorities found, setting authentication.
+2025-02-08 12:05:28 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:28 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:28 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:28 - Received payment request: DataPayment(method=PAYPAL, amount=1030, currency=USD, description=Payment for Order ID 41)
+2025-02-08 12:05:28 - Starting payment creation: total=1030.0, currency=USD, method=PAYPAL, intent=SALE
+2025-02-08 12:05:29 - Payment created successfully: PAYID-M6TTU6A43T938496U5202649
+2025-02-08 12:05:34 - Processing JWT authentication for request: /api/v1/payments/success
+2025-02-08 12:05:34 - Token not found or invalid format.
+2025-02-08 12:05:34 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:34 - Executing payment: paymentId=PAYID-M6TTU6A43T938496U5202649, payerId=JWL5GECXY8HVY
+2025-02-08 12:05:40 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:05:40 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 12:05:40 - Token found in request header.
+2025-02-08 12:05:40 - JWT token detected, extracting claims...
+2025-02-08 12:05:40 - Token found in request header.
+2025-02-08 12:05:40 - JWT token detected, extracting claims...
+2025-02-08 12:05:40 - Extracting claims from JWT.
+2025-02-08 12:05:40 - Extracting claims from JWT.
+2025-02-08 12:05:40 - Claims extracted successfully.
+2025-02-08 12:05:40 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:40 - Authorities found, setting authentication.
+2025-02-08 12:05:40 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:40 - Claims extracted successfully.
+2025-02-08 12:05:40 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:40 - Authorities found, setting authentication.
+2025-02-08 12:05:40 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:40 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:40 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:40 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:40 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:40 - Fetching all products...
+2025-02-08 12:05:40 - Fetching all products
+2025-02-08 12:05:40 - Received request to find user with ID: 1
+2025-02-08 12:05:40 - Fetching user with ID: 1
+2025-02-08 12:05:40 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:40 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:40 - Retrieved 8 products
+2025-02-08 12:05:40 - Fetched 8 products
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/Televisi%C3%B3n%20inteligente%20Amazon%20Fire%20TV.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/Apple%20MacBook%20Pro%202022.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/HP%20Pavilion%2015.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/impresora.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/Laptop%20Lenovo%20Ideapad%203%202022.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/E-YOOSO.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/Logitech%20M510.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:40 - Processing JWT authentication for request: /images/default.jpg
+2025-02-08 12:05:40 - Token not found or invalid format.
+2025-02-08 12:05:40 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:42 - Processing JWT authentication for request: /api/v1/admin/products/1
+2025-02-08 12:05:42 - Token found in request header.
+2025-02-08 12:05:42 - JWT token detected, extracting claims...
+2025-02-08 12:05:42 - Extracting claims from JWT.
+2025-02-08 12:05:42 - Claims extracted successfully.
+2025-02-08 12:05:42 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:42 - Authorities found, setting authentication.
+2025-02-08 12:05:42 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:42 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:42 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:42 - Fetching product with id: 1
+2025-02-08 12:05:42 - Fetching product with ID: 1
+2025-02-08 12:05:42 - Product retrieved successfully: Product(id=1, name=Amazon Fire TV, code=PROD_2025-01-27_bacb7, description=TV, urlImage=http://localhost:8085/images/Televisión inteligente Amazon Fire TV.jpg, price=1000.00, dateCreated=2025-01-27T14:41:04.333659, dateUpdated=2025-01-27T14:41:04.333659, userId=1, categoryId=3)
+2025-02-08 12:05:42 - Product found: Amazon Fire TV
+2025-02-08 12:05:42 - Processing JWT authentication for request: /images/Televisi%C3%B3n%20inteligente%20Amazon%20Fire%20TV.jpg
+2025-02-08 12:05:42 - Token not found or invalid format.
+2025-02-08 12:05:42 - No valid JWT token found. Clearing security context.
+2025-02-08 12:05:47 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:05:47 - Token found in request header.
+2025-02-08 12:05:47 - JWT token detected, extracting claims...
+2025-02-08 12:05:47 - Extracting claims from JWT.
+2025-02-08 12:05:47 - Claims extracted successfully.
+2025-02-08 12:05:47 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:47 - Authorities found, setting authentication.
+2025-02-08 12:05:47 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:47 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:47 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:47 - Received request to find user with ID: 1
+2025-02-08 12:05:47 - Fetching user with ID: 1
+2025-02-08 12:05:47 - User retrieved successfully: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:47 - User found: User(id=1, username=pgs, firstName=Pablo, lastName=Simavilla, email=pgs@hotmail.com, address=Invented Street 3, Gijón, cellPhone=654123200, password=$2a$10$FGMYl61ph0JS0n73KpvT1.2UmbfBEwwaLAdxDXfJ/ZCBq7yRLQwF., userType=USER, dateCreated=2025-01-21T22:25:35.683531, dateUpdated=2025-01-21T22:25:35.683531)
+2025-02-08 12:05:49 - Processing JWT authentication for request: /api/v1/orders
+2025-02-08 12:05:49 - Token found in request header.
+2025-02-08 12:05:49 - JWT token detected, extracting claims...
+2025-02-08 12:05:49 - Extracting claims from JWT.
+2025-02-08 12:05:49 - Claims extracted successfully.
+2025-02-08 12:05:49 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:49 - Authorities found, setting authentication.
+2025-02-08 12:05:49 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:49 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:49 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:49 - Request to save order: Order(id=null, dateCreated=2025-02-08T11:05:49.486, orderProducts=[OrderProduct(id=null, quantity=1, price=1000, ProductId=1)], orderState=CANCELLED, userId=1)
+2025-02-08 12:05:49 - Saving new order: Order(id=null, dateCreated=2025-02-08T11:05:49.486, orderProducts=[OrderProduct(id=null, quantity=1, price=1000, ProductId=1)], orderState=CANCELLED, userId=1)
+2025-02-08 12:05:49 - Order saved successfully with ID: 42
+2025-02-08 12:05:49 - Order saved successfully with ID: 42
+2025-02-08 12:05:49 - Processing JWT authentication for request: /api/v1/payments
+2025-02-08 12:05:49 - Token found in request header.
+2025-02-08 12:05:49 - JWT token detected, extracting claims...
+2025-02-08 12:05:49 - Extracting claims from JWT.
+2025-02-08 12:05:49 - Claims extracted successfully.
+2025-02-08 12:05:49 - Claims extracted: {jti=E-commerce, sub=pgs@hotmail.com, authorities=[ROLE_USER], iat=1739012360, exp=1739015960}
+2025-02-08 12:05:49 - Authorities found, setting authentication.
+2025-02-08 12:05:49 - Attempting authentication for user: pgs@hotmail.com
+2025-02-08 12:05:49 - User found: pgs@hotmail.com. Creating authentication token.
+2025-02-08 12:05:49 - User pgs@hotmail.com authenticated successfully.
+2025-02-08 12:05:49 - Received payment request: DataPayment(method=PAYPAL, amount=1000, currency=USD, description=Payment for Order ID 42)
+2025-02-08 12:05:49 - Starting payment creation: total=1000.0, currency=USD, method=PAYPAL, intent=SALE
+2025-02-08 12:05:50 - Payment created successfully: PAYID-M6TTVDI98080808NH1900823
+2025-02-08 12:06:51 - Processing JWT authentication for request: /api/v1/payments/success
+2025-02-08 12:06:51 - Token not found or invalid format.
+2025-02-08 12:06:51 - No valid JWT token found. Clearing security context.
+2025-02-08 12:06:51 - Executing payment: paymentId=PAYID-M6TTVDI98080808NH1900823, payerId=JWL5GECXY8HVY
+2025-02-08 12:16:19 - Processing JWT authentication for request: /api/v1/admin/products
+2025-02-08 12:16:19 - Processing JWT authentication for request: /api/v1/users/1
+2025-02-08 12:16:19 - Token found in request header.
+2025-02-08 12:16:19 - JWT token detected, extracting claims...
+2025-02-08 12:16:19 - Token found in request header.
+2025-02-08 12:16:19 - JWT token detected, extracting claims...
+2025-02-08 12:16:19 - Extracting claims from JWT.
+2025-02-08 12:16:19 - Extracting claims from JWT.
+2025-02-08 12:16:19 - JWT token has expired.
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-02-07T15:41:53Z. Current time: 2025-02-08T11:16:19Z, a difference of 70466915 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JwtValidate.extractClaimsFromJwt(JwtValidate.java:54)
+	at com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-02-08 12:16:19 - JWT token has expired.
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-02-07T15:41:53Z. Current time: 2025-02-08T11:16:19Z, a difference of 70466915 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589)
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
+	at com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JwtValidate.extractClaimsFromJwt(JwtValidate.java:54)
+	at com.pgs.ecommerce.Ecommerce.infrastructure.jwt.JwtAuthorizationFilter.doFilterInternal(JwtAuthorizationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/index.html
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/swagger-ui.css
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/index.css
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/swagger-ui-standalone-preset.js
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/swagger-ui-bundle.js
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /swagger-ui/swagger-initializer.js
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /v3/api-docs/swagger-config
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:23 - Processing JWT authentication for request: /v3/api-docs
+2025-02-08 12:16:23 - Token not found or invalid format.
+2025-02-08 12:16:23 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:24 - Init duration for springdoc-openapi is: 937 ms
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/index.html
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/swagger-ui.css
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/index.css
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/swagger-initializer.js
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/swagger-ui-standalone-preset.js
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - Processing JWT authentication for request: /swagger-ui/swagger-ui-bundle.js
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - Token not found or invalid format.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:33 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:34 - Processing JWT authentication for request: /v3/api-docs/swagger-config
+2025-02-08 12:16:34 - Token not found or invalid format.
+2025-02-08 12:16:34 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:34 - Processing JWT authentication for request: /swagger-ui/favicon-32x32.png
+2025-02-08 12:16:34 - Token not found or invalid format.
+2025-02-08 12:16:34 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:34 - Processing JWT authentication for request: /v3/api-docs
+2025-02-08 12:16:34 - Token not found or invalid format.
+2025-02-08 12:16:34 - No valid JWT token found. Clearing security context.
+2025-02-08 12:16:34 - Init duration for springdoc-openapi is: 417 ms
+2025-02-08 12:34:14 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=47s385ms807µs).
+2025-02-08 20:51:12 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=8h17m5s272ms154µs900ns).
+2025-02-08 22:50:26 - HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=1h52m14s203ms316µs100ns).
